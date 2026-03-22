@@ -60,7 +60,7 @@ urban-pollution-income/
 │   └── 03_modelling.ipynb               # Module 3: XGBoost Modelling (upcoming)
 │
 ├── src/
-│   ├── acquisition.py                   # OpenAQ fetch + Census load + cleaning
+│   ├── acquisition_cleaning.py          # OpenAQ fetch + Census load + cleaning
 │   └── integration.py                   # Reverse geocoding + merge + feature engineering
 │
 ├── outputs/
@@ -117,7 +117,7 @@ The pipeline follows four sequential stages:
 
 ## Pipeline Modules
 
-### Module 1 — Data Acquisition & Cleaning (`src/acquisition.py`)
+### Module 1 — Data Acquisition & Cleaning (`src/acquisition_cleaning.py`)
 
 ```python
 # Key steps performed:
@@ -171,8 +171,8 @@ jupyter>=1.0.0
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/urban-pollution-income.git
-cd urban-pollution-income
+git clone https://github.com/bruvisrekt/UrbanPollutantExposure.git
+cd UrbanPollutantExposure
 ```
 
 ### 2. Install dependencies
@@ -183,7 +183,7 @@ pip install -r requirements.txt
 
 ### 3. Add your API key
 
-Open `src/acquisition.py` and replace the placeholder with your OpenAQ API key:
+Open `src/acquisition_cleaning.py` and replace the placeholder with your OpenAQ API key:
 
 ```python
 headers = {'X-API-Key': 'YOUR_OPENAQ_API_KEY'}
@@ -193,7 +193,7 @@ headers = {'X-API-Key': 'YOUR_OPENAQ_API_KEY'}
 
 ```bash
 # Step 1 — Acquire and clean data
-python src/acquisition.py
+python src/acquisition_cleaning.py
 
 # Step 2 — Integrate datasets
 python src/integration.py
