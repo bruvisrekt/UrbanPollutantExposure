@@ -1,4 +1,3 @@
-
 # Urban Pollutant Exposure
 
 Does household income predict exposure to air pollution across US ZIP codes? This project pulls real-time air quality data and Census income data to test that question statistically.
@@ -32,10 +31,21 @@ Across the **121 ZIP codes** with both valid pollution and income data:
 
 **No statistically significant relationship was found** between median household income and PM2.5 exposure in this sample. Mean PM2.5 by quintile ranged narrowly from 9.27 µg/m³ (Q5, highest income) to 10.50 µg/m³ (Q4) — differences well within the range of natural variation (± 1 SD per group is 2–5 µg/m³).
 
-![Scatter plot of income vs PM2.5 by quintile](graphs/income_vs_pm25_scatter.png)
-![Bar chart of mean PM2.5 by income quintile](graphs/pm25_by_quintile_bar.png)
+![Scatter plot of income vs PM2.5 by quintile](urban_pollutant_exposure/outputs/fig1_scatter_regression.png)
+![Bar chart of mean PM2.5 by income quintile](urban_pollutant_exposure/outputs/fig2_bar_quintile.png)
 
 **Caveats:** this is a modest sample (121 ZIP codes, limited by OpenAQ station coverage and successful geocoding), a single one-year window, and PM2.5 only — it does not capture other pollutants, indoor air quality, or proximity to specific pollution sources (highways, industrial sites) that more localized studies often find correlated with income. A null result at this scale doesn't rule out disparities that might appear with denser station coverage, a longer time series, or pollutant-specific analysis.
+
+<details>
+<summary>Additional charts</summary>
+
+![Box plot of PM2.5 by quintile](urban_pollutant_exposure/outputs/fig3_boxplot_quintile.png)
+![Violin plot of PM2.5 by quintile](urban_pollutant_exposure/outputs/fig4_violin_quintile.png)
+![Correlation heatmap](urban_pollutant_exposure/outputs/fig5_correlation_heatmap.png)
+![Top 10 ZIP code comparison](urban_pollutant_exposure/outputs/fig6_top10_comparison.png)
+![Income quintile disparity gap](urban_pollutant_exposure/outputs/fig7_disparity_gap.png)
+
+</details>
 
 ## Tech Stack
 
